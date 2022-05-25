@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>@ViewData["Title"] - IDonateApp</title>
+   
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <style>
+        * {
+  padding:0;
+  margin:0;
+}
+        body{  display: table;
+  width: 100%;
+  height: 100vh;
+  padding: 100px 0;
+  color: white;
+ background-image: url('img/bgdonate.png');
+  background-position: 30% 45%;
+  background-size: cover;
+
+
+
+            
+        }
+    </style>
+</head>
+<body>
+ 
+    <header>
+        <nav class="navbar navbar-light bg-warning">
+            
+            <div class="container-fluid bg-índigo"  >
+               
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+ 
+                <img src="~/img/idonate1.png" alt="" width="100" height="40">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-índigo" asp-area="" asp-controller="Home">CADASTRE-SE</a>
+                               <a class="nav-link text-índigo" asp-area="" asp-controller="Login">LOGIN</a>
+                        </li>
+                     
+                         
+                        </ul>
+                   
+             </div>
+        </nav>
+      
+    </header>
+    
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer bg-dark ">
+        <div class="container text-white">
+            &copy; 2022 - FALE CONOSCO-
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
